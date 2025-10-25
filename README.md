@@ -49,7 +49,7 @@ A solução é baseada em **microsserviços independentes**, desenvolvidos em **
 
 O diagrama abaixo ilustra a comunicação entre os módulos Frontend, Backend e os serviços Azure:
 
-![Diagrama de Arquitetura do Sistema de Reembolso](https://private-us-east-1.manuscdn.com/sessionFile/tUB6Z4VfJkZShiHilpfQji/sandbox/Bo1inOidTzh83gsb26FFky-images_1761432434420_na1fn_L2hvbWUvdWJ1bnR1L2FyY2hpdGVjdHVyZV9kaWFncmFt.png)
+![Diagrama de Arquitetura do Sistema de Reembolso]([https://private-us-east-1.manuscdn.com/sessionFile/tUB6Z4VfJkZShiHilpfQji/sandbox/Bo1inOidTzh83gsb26FFky-images_1761432434420_na1fn_L2hvbWUvdWJ1bnR1L2FyY2hpdGVjdHVyZV9kaWFncmFt.png](https://s6.imgcdn.dev/Yy0zpH.png))
 
 ---
 
