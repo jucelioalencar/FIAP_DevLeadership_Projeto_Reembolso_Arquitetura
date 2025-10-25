@@ -1,4 +1,4 @@
-# 🚀 Sistema de Avaliação Automática de Reembolso — Backend e Frontend
+#  Sistema de Avaliação Automática de Reembolso
 
 Este projeto é composto por **dois módulos principais** que, juntos, formam a solução completa de **automação inteligente de reembolsos** desenvolvida no curso **FIAP DevLeadership**.  
 A aplicação foi desenhada sob uma **arquitetura de microsserviços**, com foco em **IA, integração e escalabilidade**.
