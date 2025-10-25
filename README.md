@@ -21,7 +21,7 @@ A solução é baseada em **microsserviços independentes**, desenvolvidos em **
 
 ### 🧩 Componentes Principais
 
-- **Frontend (Web App em Angular/HTML/CSS)**  
+- **Frontend (Web App em React)**  
   Interface de solicitação e acompanhamento de reembolsos pelos colaboradores.  
   Comunicação direta com o API Gateway do backend.  
 
