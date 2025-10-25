@@ -35,8 +35,6 @@ O diagrama abaixo ilustra o fluxo de dependências e a comunicação entre os co
 | **Comunicação** | Azure Service Bus (Mensageria) |
 | **Dados** | Azure SQL Database, Azure Blob Storage |
 
----
 
-*Documentação revisada por Manus AI.*
 
 
