@@ -49,7 +49,9 @@ A solução é baseada em **microsserviços independentes**, desenvolvidos em **
 
 O diagrama abaixo ilustra a comunicação entre os módulos Frontend, Backend e os serviços Azure:
 
-![Diagrama de Arquitetura do Sistema de Reembolso]([[https://s6.imgcdn.dev/Yy0zpH.png))
+<p align="center">
+  <img src="https://s6.imgcdn.dev/Yy0zpH.png" alt="Diagrama de Arquitetura do Sistema de Reembolso" width="800">
+</p>
 
 ---
 
@@ -57,12 +59,10 @@ O diagrama abaixo ilustra a comunicação entre os módulos Frontend, Backend e 
 
 | Categoria | Tecnologia |
 | :--- | :--- |
-| **Linguagens / Frameworks** | .NET 8 (C#), Angular |
+| **Linguagens / Frameworks** | .NET 8 (C#), React |
 | **Arquitetura** | Microsserviços, Azure Functions, DDD, CQRS |
 | **IA / OCR** | Azure AI Vision |
 | **Comunicação** | Azure Service Bus |
 | **Banco de Dados** | Azure SQL Database |
 | **Armazenamento** | Azure Blob Storage |
 | **Infraestrutura** | Docker, Docker Swarm, GitHub Actions, Cloudflare Tunnels |
-
-
