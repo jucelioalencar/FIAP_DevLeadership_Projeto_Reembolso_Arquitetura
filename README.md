@@ -1,206 +1,42 @@
-# 🚀 Sistema de Avaliação Automática de Reembolso - Coris Seguros
+# 🚀 Sistema de Avaliação Automática de Reembolso - Backend
 
-## 🎓 Projeto FIAP DevLeadership
+Este projeto é o **Backend** da solução de reembolso, desenvolvido como parte do curso **FIAP DevLeadership**. Seu foco é a **automação completa** do processo de avaliação de solicitações via **microsserviços** e **Inteligência Artificial**.
 
-Este projeto foi desenvolvido como parte do curso **FIAP DevLeadership** e tem como objetivo demonstrar uma arquitetura de microsserviços completa para automação de reembolso de passagens aéreas.
+## 🔗 Links do Projeto
 
-### 🎯 Objetivos do Projeto
+| Recurso | Link |
+| :--- | :--- |
+| **Repositório Backend** | [jucelioalencar/FIAP_DevLeadership_Projeto_Reembolso_Backend](https://github.com/jucelioalencar/FIAP_DevLeadership_Projeto_Reembolso_Backend) |
+| **Repositório Frontend** | [jucelioalencar/FIAP_DevLeadership_Projeto_Reembolso_Frontend](https://github.com/jucelioalencar/FIAP_DevLeadership_Projeto_Reembolso_Frontend) |
+| **Acesso à Aplicação** | [https://fiap.jucelio.work/](https://fiap.jucelio.work/) |
 
-- 🏗️ **Demonstrar arquitetura de microsserviços** com separação clara de responsabilidades
-- 🔧 **Implementar padrões de desenvolvimento** como DDD, CQRS e Event Sourcing
-- ☁️ **Utilizar tecnologias cloud** do Azure para escalabilidade e confiabilidade
-- 🚀 **Aplicar boas práticas** de DevOps, CI/CD e monitoramento
-- 🔗 **Mostrar integração** entre diferentes serviços e APIs externas
+## 💡 Resumo da Arquitetura (Microsserviços)
 
-### 📸 Demonstração de Containers
+A solução é baseada em uma arquitetura de **microsserviços** em **.NET 8 (C#)**, utilizando o **Azure** como plataforma. Os serviços são desacoplados e comunicam-se de forma assíncrona via **Azure Service Bus**.
 
-![Sistema em Funcionamento](./docs/print.png)
+*   **API Gateway (YARP)**: Ponto de entrada unificado.
+*   **Processamento Assíncrono**: Serviços de Ingestão, OCR (**Azure AI Vision**), Validação (APIs externas), Análise (Regras de Negócio) e Notificação.
+*   **Dados**: **Azure SQL Database** e **Azure Blob Storage**.
+*   **Padrões Aplicados**: Demonstração de DDD, CQRS e Event Sourcing.
 
-*Screenshot mostrando todos os serviços rodando com sucesso no Docker Compose*
+## 🗺️ Diagrama de Arquitetura
 
-## 🏗️ Arquitetura de Microsserviços
+O diagrama abaixo ilustra o fluxo de dependências e a comunicação entre os componentes do sistema.
 
-Este projeto implementa uma solução completa de automação de reembolso utilizando arquitetura de microsserviços no Azure, demonstrando os conceitos aprendidos no curso FIAP DevLeadership.
+![Diagrama de Arquitetura do Sistema de Reembolso](https://private-us-east-1.manuscdn.com/sessionFile/tUB6Z4VfJkZShiHilpfQji/sandbox/Bo1inOidTzh83gsb26FFky-images_1761432434420_na1fn_L2hvbWUvdWJ1bnR1L2FyY2hpdGVjdHVyZV9kaWFncmFt.png?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdFVCNlo0VmZKa1pTaGlIaWxwZlFqaS9zYW5kYm94L0JvMWluT2lkVHpoODNnc2IyNkZGa3ktaW1hZ2VzXzE3NjE0MzI0MzQ0MjBfbmExZm5fTDJodmJXVXZkV0oxYm5SMUwyRnlZMmhwZEdWamRIVnlaVjlrYVdGbmNtRnQucG5nIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=b~~dWf5~NOZeaxMszLBHFuTUcP~BH5P5LmDa8QFs25rFWW6FpIeSHiJMIuIy0gSFR~2sY9sRA1mhhTxLOa904t4W4K1Sr~LBcKCpbK8Tojb1Wwx-hJEp~ZlSlTkLgEo2tuboFpWUkDIwsQJgva-56BtzUxTvyUWRy6aC6GZ62BL92j6x3BGNSRQn4jnQqRFScIkpSUmElPs5Lo8TPjitG~IyeEQqYlvRog3wnJV-6S93DI5n7jAkVHyRfFb9kyeEuu04YTUT550QHOSfctACFG4sv2O6-xiyby3Z61PNmKmU3aMh1EY8mUjJsin-02-NmIVylX0sHHyN~pkEIlcw0A__)
 
-### 🔧 Componentes da Arquitetura
+## 🛠️ Tecnologias Chave
 
-- 🌐 **Gateway de API** - Ponto de entrada unificado (.NET/YARP)
-- 📥 **Serviço de Ingestão** - Recebe e armazena documentos (.NET/C#)
-- 👁️ **Serviço de OCR/Extração** - Processa documentos com Azure AI Vision (Azure Functions)
-- ✅ **Serviço de Validação** - Integração com APIs externas (.NET/C#)
-- 🧠 **Serviço de Análise** - Aplica regras de negócio (.NET/C#)
-- 📧 **Serviço de Notificação** - Envia notificações (.NET/C#)
+| Categoria | Tecnologia |
+| :--- | :--- |
+| **Linguagem/Framework** | **.NET 8** e **C#** |
+| **Arquitetura** | Microsserviços, Azure Functions |
+| **IA/Processamento** | Azure AI Vision (OCR) |
+| **Comunicação** | Azure Service Bus (Mensageria) |
+| **Dados** | Azure SQL Database, Azure Blob Storage |
 
-### 🛠️ Tecnologias Utilizadas
+---
 
-- 💻 **Backend**: .NET 8, C#, Azure Functions
-- 🗄️ **Banco de Dados**: Azure SQL Database
-- 📦 **Armazenamento**: Azure Blob Storage
-- 📨 **Mensageria**: Azure Service Bus
-- 👁️ **OCR**: Azure AI Vision
-- 🌐 **Gateway**: YARP (Yet Another Reverse Proxy)
+*Documentação revisada por Manus AI.*
 
-### 📁 Estrutura do Projeto
 
-```
-├── src/
-│   ├── Gateway/                 # 🌐 Gateway de API
-│   └── Services/
-│       ├── Ingestion/          # 📥 Serviço de Ingestão
-│       ├── OCR/               # 👁️ Serviço de OCR/Extração
-│       ├── Validation/        # ✅ Serviço de Validação
-│       ├── Analysis/          # 🧠 Serviço de Análise
-│       └── Notification/      # 📧 Serviço de Notificação
-├── infrastructure/             # 🏗️ Scripts de infraestrutura
-└── docs/                      # 📚 Documentação
-```
-
-### 🚀 Como Executar
-
-#### 🐳 Opção 1: Docker Compose (Recomendado)
-
-1. **📋 Pré-requisitos**:
-   - 🐳 Docker Desktop
-   - 🔧 Docker Compose
-
-2. **▶️ Executar todos os serviços**:
-   ```bash
-   # Build e execução dos containers
-   docker-compose up --build
-   
-   # Executar em background
-   docker-compose up -d
-   ```
-
-3. **📊 Verificar status dos serviços**:
-   ```bash
-   docker-compose ps
-   ```
-
-4. **🌐 Acessar os serviços**:
-   - 🌐 **Gateway**: http://localhost:5000
-   - 📥 **Ingestion**: http://localhost:7001/swagger
-   - ✅ **Validation**: http://localhost:7003/swagger
-   - 🧠 **Analysis**: http://localhost:7004/swagger
-   - 📧 **Notification**: http://localhost:7005/swagger
-   - 🗄️ **SQL Server**: localhost:1433
-   - 📦 **Azurite (Storage)**: localhost:10000-10002
-
-#### 💻 Opção 2: Execução Individual
-
-1. **📋 Pré-requisitos**:
-   - 💻 .NET 8 SDK
-   - 🗄️ SQL Server (local ou Docker)
-   - 📦 Azure Storage Emulator (Azurite)
-
-2. **⚙️ Configuração**:
-   ```bash
-   # Restaurar pacotes .NET
-   dotnet restore
-   ```
-
-3. **▶️ Executar cada serviço**:
-   ```bash
-   # Gateway
-   cd src/Gateway
-   dotnet run
-   
-   # Ingestion
-   cd src/Services/Ingestion
-   dotnet run
-   
-   # Validation
-   cd src/Services/Validation
-   dotnet run
-   
-   # Analysis
-   cd src/Services/Analysis
-   dotnet run
-   
-   # Notification
-   cd src/Services/Notification
-   dotnet run
-   ```
-
-### ✅ Testes Realizados
-
-- 🏗️ **Build dos Containers**: Todos os serviços compilados com sucesso
-- ▶️ **Execução dos Containers**: Todos os containers em execução
-- 🌐 **Conectividade**: Serviços respondendo nas portas configuradas
-- 📚 **Swagger UI**: Documentação da API disponível em todos os serviços
-- 🗄️ **Banco de Dados**: SQL Server funcionando corretamente
-- 📦 **Storage**: Azurite (Azure Storage Emulator) operacional
-
-### ☁️ Arquitetura Cloud
-
-- 🚀 **Azure App Service** - Hospedagem dos microsserviços
-- ⚡ **Azure Functions** - Processamento serverless
-- 📦 **Azure Blob Storage** - Armazenamento de documentos
-- 📨 **Azure Service Bus** - Fila de mensagens
-- 👁️ **Azure AI Vision** - OCR e processamento de imagens
-- 🗄️ **Azure SQL Database** - Banco de dados relacional
-- 🌐 **Azure API Management** - Gateway de API
-- 🔐 **Azure Key Vault** - Gestão de segredos
-
-### 🏗️ Conceitos de Arquitetura Aplicados
-
-#### 🎨 Padrões de Design
-- 🏛️ **Domain-Driven Design (DDD)**: Separação clara de domínios e contextos
-- 🔄 **CQRS**: Separação entre comandos e consultas
-- 📝 **Event Sourcing**: Rastreamento de eventos de negócio
-- 🗃️ **Repository Pattern**: Abstração de acesso a dados
-- 💉 **Dependency Injection**: Inversão de controle
-
-#### 🔗 Padrões de Integração
-- 🌐 **API Gateway**: Ponto de entrada unificado
-- 📨 **Service Bus**: Comunicação assíncrona entre serviços
-- ⚡ **Event-Driven Architecture**: Comunicação baseada em eventos
-- 🔌 **Circuit Breaker**: Tolerância a falhas
-- 🔄 **Retry Pattern**: Recuperação automática de falhas
-
-#### 🧩 Princípios SOLID
-- 🎯 **Single Responsibility**: Cada serviço tem uma responsabilidade específica
-- 🔓 **Open/Closed**: Extensível sem modificação
-- 🔄 **Liskov Substitution**: Substituição de implementações
-- 🎭 **Interface Segregation**: Interfaces específicas
-- ⬆️ **Dependency Inversion**: Dependência de abstrações
-
-### 🔐 Segurança
-
-- 🔒 Criptografia de dados em repouso e em trânsito
-- 👤 Azure Active Directory para autenticação
-- 🗝️ Azure Key Vault para gestão de segredos
-- 📊 Monitoramento com Azure Monitor e Application Insights
-
-### 📊 Monitoramento e Observabilidade
-
-- 📝 **Logs estruturados** com Serilog
-- 📈 **Métricas de performance** com Application Insights
-- ❤️ **Health checks** para todos os serviços
-- 🔍 **Distributed tracing** para rastreamento de requisições
-- 🚨 **Alertas automáticos** para falhas e degradação
-
-### 🚀 DevOps e CI/CD
-
-- 🐳 **Containerização** com Docker
-- 🎼 **Orquestração** com Docker Compose
-- 🏗️ **Infraestrutura como código** com Azure Resource Manager
-- 🚀 **Deploy automatizado** com Azure DevOps
-- 🧪 **Testes automatizados** em pipeline de CI/CD
-
-### 🤝 Contribuição
-
-Este projeto foi desenvolvido como parte do curso **FIAP DevLeadership** para demonstrar:
-
-1. 🏗️ **Arquitetura de Microsserviços** em ambiente real
-2. ☁️ **Integração com serviços Azure** nativos
-3. 🔧 **Padrões de desenvolvimento** modernos
-4. 🚀 **Boas práticas** de DevOps e monitoramento
-5. 📈 **Escalabilidade** e **confiabilidade** em produção
-
-### 👥 Autores
-
--  **Autor**: Jucelio Alencar 
-- 🎓 **Curso**: FIAP DevLeadership
-- 🎯 **Objetivo**: Demonstrar arquitetura de microsserviços
-- 🛠️ **Tecnologias**: .NET 8, Azure, Docker, SQL Server
